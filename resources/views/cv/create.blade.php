@@ -1,26 +1,15 @@
 @extends('layouts.app') 
 
 @section('content')
-<!-- @if($errors->any())
-<div class="alert alert-danger">  
-@foreach($errors->all() as $indication)
-       
-            <li> {{$indication}} </li>
-     
-    
-@endforeach
-</div>
-@endif -->
-<!-- @if($errors->any())
-@foreach($errors->all() as $error)
-<li>{{$error}}</li>
-@endforeach
-@endif -->
-
+<!-- @if($errors->any()) <div class="alert alert-danger">
+@foreach($errors->all() as $indication) <li>{{$indication}}</li> @endforeach
+</div> @endif -->
+<!-- @if($errors->any()) @foreach($errors->all() as $error) <li>{{$error}}</li>
+@endforeach @endif -->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <form action="{{url('cvs')}}" method="post"  > 
+            <form  enctype='multipart/form-data'   action="{{url('cvs')}}" method="post"  > 
             @csrf
          <!-- {{csrf_field()}} -->
                 <div class="form-group  ">
@@ -42,6 +31,7 @@
                 <div class="form-group">
                     <label for="">Présentation :</label>
                     <textarea class="form-control @if($errors->get('presentation') )  is-valid @endif" name="presentation" cols="30" rows="5" >{{old('presentation')}}</textarea>
+                    
            @if($errors->get('presentation'))
 
            @foreach($errors->get('presentation') as $error )
@@ -52,6 +42,10 @@
 
            @endforeach
            @endif
+                </div>
+                <div class="form-group">
+                    <label> Image</label>
+                    <input type="file" class="form-control" name="photo" >
                 </div>
 
                 <div class="form-group">

@@ -16,7 +16,7 @@
     <div class="container">
      <div class="row">
        <div class="col-md-6 offset-3 text-center">
-          <div class="alert alert-success " st > {{ session()->get('edition') }} </div>
+          <div class="alert alert-success "> {{ session()->get('edition') }} </div>
        </div>
      </div>
     </div>

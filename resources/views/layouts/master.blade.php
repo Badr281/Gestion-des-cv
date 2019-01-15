@@ -6,12 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}"> 
-        <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-        <script src="{{asset('assets/js/jquery.min.js')}}"></script>
-    
-
-  
 </head>
+
 <body>
 
 <nav class="navbar navbar-default">
@@ -76,7 +72,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a> </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -95,5 +91,7 @@
 
 
 @yield('content')
+<script src="{{asset('assets/js/jquery.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js') }}"></script>
 </body>
 </html>

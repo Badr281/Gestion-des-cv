@@ -28,6 +28,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     public function cvs(){
-        $this->hasMany('App\Cv');
+      return  $this->hasMany('App\Cv');
     }
 }
